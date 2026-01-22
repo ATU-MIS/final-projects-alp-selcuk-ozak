@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Daily Plan</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1>Create Daily Plan</h1>
+
+    <label>Day Start Time:</label>
+    <br>
+    <input type="time" id="dayStart" required>
+    <br><br>
+
+    <label>Day End Time:</label>
+    <br>
+    <input type="time" id="dayEnd" required>
+    <br><br>
+
+    <button id="createPlanBtn">Create Plan</button>
+
+    <div id="planResult">
+    <p style="color:#888; text-align:center;">
+        Generated daily plan will appear here.
+    </p>
+</div>
+
+    <br>
+    <a href="index.html" class="back-home">Back to Home</a>
+
+    <script src="js/plan.js"></script>
+
+</body>
+</html>

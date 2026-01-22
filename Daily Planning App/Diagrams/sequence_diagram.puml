@@ -1,0 +1,29 @@
+@startuml
+actor User
+participant "Daily Planning App" as System
+participant Task
+participant "Unavailable Hours" as UH
+participant Plan
+participant "Notification Service" as NS
+
+User -> System: Select "Create Daily Plan"
+System -> Task: Fetch tasks
+Task --> System: Task list
+
+System -> UH: Load unavailable hours
+UH --> System: Unavailable hours
+
+System -> System: Analyze tasks
+(priorities & durations)
+System -> Plan: Create daily plan
+Plan --> System: Daily plan
+
+System -> User: Display plan
+User -> System: Approve plan
+
+System -> Plan: Save plan
+System -> NS: Schedule reminders
+NS --> System: Reminders scheduled
+
+System -> User: Plan created confirmation
+@enduml

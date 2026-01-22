@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Task</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1>Add Task</h1>
+
+    <form id="taskForm">
+        <input type="text" id="title" placeholder="Task Title" required>
+        <br><br>
+
+        <textarea id="description" placeholder="Description" required></textarea>
+        <br><br>
+
+        <input type="number" id="duration" placeholder="Duration (minutes)" required>
+        <br><br>
+
+        <select id="priority" required>
+            <option value="">Select Priority</option>
+            <option value="3">Low</option>
+            <option value="2">Medium</option>
+            <option value="1">High</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Add Task</button>
+    </form>
+
+    <br>
+    <a href="index.html" class="back-home">Back to Home</a>
+
+    <script src="js/tasks.js"></script>
+
+</body>
+</html>
